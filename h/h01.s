@@ -13,10 +13,3 @@
 ;
 
 .file "ex_h_1.s"
-
-fadofkasdlçfkjasdf
-ad
-foajgf
-asojgaf
-jga
-f
