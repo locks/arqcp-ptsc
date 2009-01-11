@@ -2,8 +2,8 @@
 Neste repositório encontram-se as soluções (elaboradas por diversos alunos do DEI) para os exercícios da cadeira de __ARQCP__.
 
 ## Enunciados
-Juntei os enunciados de cada série em PDFs, para poderem imprimir e resolver no papelinho :P  
-Os ficheiros encontram-se na pasta _apoio_.
+Dentro de cada série, podem ver os enunciados de todos os exercícios no ficheiro README.markdown.  
+Juntei os enunciados para poderem imprimir e resolver no papelinho :P
 
 ## Exercícios
 Os exercícios encontram-se dentro das pastas das respectivas séries, de A a H.  
