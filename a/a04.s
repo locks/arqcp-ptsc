@@ -9,11 +9,15 @@
 .org 0x1000
 	br inicio
 
-ex_a_4::				; 3*2 -> 3 2 *
-
+a04::				; 3*2 -> 3 2 *
+	pop g0
+	push.l #0
+	divu
 ret
 
 inicio::
+	push.l #3
+	push.l #2
 	call ex_a_4
 
 	halt

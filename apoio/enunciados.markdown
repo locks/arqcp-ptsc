@@ -32,7 +32,7 @@ Repita o exercício _04_ utilizando a rotina desenvolvida no exercício anterior
 
 ## 07
 
-Faça uma rotina que calcule o resultado da operação __-3*2__
+Faça uma rotina que calcule o resultado da operação -3*2
 
 ## 08
 
@@ -44,7 +44,7 @@ Faça uma rotina que calcule o resultado da operação __3/2__
 
 ## 10
 
-Faça uma rotina que possa utilizar num programa para efectuar a divisão de dois operandos:
+Faça uma rotina que possa utilizar num programa para efectuar a divisão de dois operandos:  
 + __mydivu__ para números sem sinal
 
 ## 11
@@ -53,8 +53,7 @@ Repita o exercício _09_ utilizando a rotina desenvolvida no exercício anterior
 
 ## 12
 
-Faça uma rotina que calcule o resultado da operação
-__(3+2)/(5+4)/(4-1)__
+Faça uma rotina que calcule o resultado da operação (3+2)/(5+4)/(4-1)
 
 ## 13
 
@@ -63,13 +62,13 @@ Na pilha, os parâmetros de entrada e de saída são os apresentados na indicaç
 + celsiusFahrenheit (n1 -- n2)
 
 A regra de conversão será:
-__C = 5/9*(F-32)__
++ C = 5/9*(F-32)
 
 ## 14
 
 Faça uma rotina que faça a conversão Métrico/Imperial.  
 Na pilha, os parâmetros de entrada e de saída são os apresentados na indicação feita para referência à rotina:
-+ metroImperial (n1 -- n2)__
++ metroImperial (n1 -- n2)
 
 As regras de conversão são:
 + 1 Polegada = 2,5401 Centímetros

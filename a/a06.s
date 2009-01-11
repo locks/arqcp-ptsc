@@ -3,18 +3,18 @@
 ; A6:	Repita o exercício A4 utilizando a rotina desenvolvida no exercício anterior.
 ;
 
-.file "ex_a_6.s"
+.file "a06.s"
+.include "../lib/auxil.s"
+.include "a05.s"
 
-.org 0x1000        			; programa inicia-se no byte 0x1000
-        br inicio
-.include  "auxil.s"      		; definições auxiliares
+.org 0x1000
+	br inicio
 
-ex_a_6::
-
-	ret
 
 inicio::
-	call ex_a_6
+	push.l #3
+	push.l #2
+	call mymulu
 
 	halt
 	.end

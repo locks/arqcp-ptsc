@@ -3,18 +3,22 @@
 ; A8:		Faça uma rotina que calcule o resultado da operação -3*2
 ;
 
-.file "ex_a_7.s"
+.file "a07.s"
+.include "../lib/auxil.s"
+.include "../lib/util.s"
 
-.org 0x1000        			; programa inicia-se no byte 0x1000
-        br inicio
-.include  "auxil.s"      		; definições auxiliares
+.org 0x1000
+	br inicio
 
-ex_a_7::				; -3*2
-
-		ret
+a07::
+	call mymulu
+	pop
+ret
 
 inicio::
-		call ex_a_7
+	push.l #-3
+	push.l #2
+	call ex_a_7
 
-		halt
-		.end
+	halt
+.end
