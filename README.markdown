@@ -1,12 +1,12 @@
 Introdução
 ==========
 
-Neste _repositório_ encontram-se as soluções (elaboradas por diversos alunos do DEI) para os exercícios da cadeira de __ARQCP__.
+Neste repositório encontram-se as soluções (elaboradas por diversos alunos do DEI) para os exercícios da cadeira de __ARQCP__.
 
 Enunciados
 ----------
 
-Juntei os enunciados de cada série em PDFs, para poderem imprimir e resolver num papelinho :P
+Juntei os enunciados de cada série em PDFs, para poderem imprimir e resolver no papelinho :P
 
 Exercícios
 ----------
