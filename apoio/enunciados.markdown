@@ -12,13 +12,13 @@ _nota_: 1-(2+5) -> 1 2 5 + -
 
 ## 03
 
-Faça uma rotina que calcule o resultado da operação: (3+2)-(3-5)
+Faça uma rotina que calcule o resultado da operação: (3+2)-(3-5)  
 _nota_: 3 2 + 3 5 - -
 
 ## 04
 
-Faça uma rotina que calcule o resultado da operação 3*2
-_nota_: sem recorrer a bibliotecas
+Faça uma rotina que calcule o resultado da operação 3*2  
+_nota_ sem recorrer a bibliotecas
 
 ## 05
 
@@ -32,7 +32,7 @@ Repita o exercício _04_ utilizando a rotina desenvolvida no exercício anterior
 
 ## 07
 
-Faça uma rotina que calcule o resultado da operação -3*2
+Faça uma rotina que calcule o resultado da operação __-3*2__
 
 ## 08
 
@@ -40,7 +40,7 @@ Faça uma rotina que calcule o resultado da operação (3+2)*(5+4)*(4-1)
 
 ## 09
 
-Faça uma rotina que calcule o resultado da operação 3/2
+Faça uma rotina que calcule o resultado da operação __3/2__
 
 ## 10
 
@@ -53,15 +53,17 @@ Repita o exercício _09_ utilizando a rotina desenvolvida no exercício anterior
 
 ## 12
 
-Faça uma rotina que calcule o resultado da operação (3+2)/(5+4)/(4-1)
+Faça uma rotina que calcule o resultado da operação
+__(3+2)/(5+4)/(4-1)__
 
 ## 13
 
 Faça uma rotina que faça a conversão Celsius/Fahrenheit.  
 Na pilha, os parâmetros de entrada e de saída são os apresentados na indicação feita para referência à rotina:
-+ __celsiusFahrenheit (n1 -- n2)__
++ celsiusFahrenheit (n1 -- n2)
 
-A regra de conversão será: __C = 5/9*(F-32)__
+A regra de conversão será:
+__C = 5/9*(F-32)__
 
 ## 14
 
@@ -79,4 +81,4 @@ As regras de conversão são:
 
 Faça uma rotina que faça a conversão Metro/Centímetro.  
 Na pilha, os parâmetros de entrada e de saída são os apresentados na indicação feita para referência à rotina:
-+ __mCm (n1 -- n2)__
++ mCm (n1 -- n2)
