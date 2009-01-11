@@ -1,61 +1,61 @@
 # Série A
 
-## 01
+## Exercício 01
 
 Faça uma rotina que calcule o resultado da operação: 5+4-6  
 _nota_: 5+4-6 -> 5 4 + 6 -
 
-## 02
+## Exercício 02
 
 Faça uma rotina que calcule o resultado da operação: 1-(2+5)  
 _nota_: 1-(2+5) -> 1 2 5 + -
 
-## 03
+## Exercício 03
 
 Faça uma rotina que calcule o resultado da operação: (3+2)-(3-5)  
 _nota_: 3 2 + 3 5 - -
 
-## 04
+## Exercício 04
 
 Faça uma rotina que calcule o resultado da operação 3*2  
 _nota_ sem recorrer a bibliotecas
 
-## 05
+## Exercício 05
 
 Faça uma rotina que possa utilizar num programa para efectuar a multiplicação de dois operandos:
 + __mymulu__ para números sem sinal
 + __mumuls__ para números com sinal
 
-## 06
+## Exercício 06
 
 Repita o exercício _04_ utilizando a rotina desenvolvida no exercício anterior.
 
-## 07
+## Exercício 07
 
 Faça uma rotina que calcule o resultado da operação -3*2
 
-## 08
+## Exercício 08
 
 Faça uma rotina que calcule o resultado da operação (3+2)*(5+4)*(4-1)
 
-## 09
+## Exercício 09
 
 Faça uma rotina que calcule o resultado da operação __3/2__
 
-## 10
+## Exercício 10
 
 Faça uma rotina que possa utilizar num programa para efectuar a divisão de dois operandos:  
 + __mydivu__ para números sem sinal
 
-## 11
+## Exercício 11
 
 Repita o exercício _09_ utilizando a rotina desenvolvida no exercício anterior.
 
-## 12
+## Exercício 12
 
 Faça uma rotina que calcule o resultado da operação (3+2)/(5+4)/(4-1)
 
-## 13
+## Exercício 13
 
 Faça uma rotina que faça a conversão Celsius/Fahrenheit.  
 Na pilha, os parâmetros de entrada e de saída são os apresentados na indicação feita para referência à rotina:
@@ -64,7 +64,7 @@ Na pilha, os parâmetros de entrada e de saída são os apresentados na indicaç
 A regra de conversão será:
 + C = 5/9*(F-32)
 
-## 14
+## Exercício 14
 
 Faça uma rotina que faça a conversão Métrico/Imperial.  
 Na pilha, os parâmetros de entrada e de saída são os apresentados na indicação feita para referência à rotina:
@@ -76,7 +76,7 @@ As regras de conversão são:
 + 1 Milha Terrestre = 1,6093 Quilómetros
 + 1 Milha Marítima = 1,8522 Quilómetros
 
-## 15
+## Exercício 15
 
 Faça uma rotina que faça a conversão Metro/Centímetro.  
 Na pilha, os parâmetros de entrada e de saída são os apresentados na indicação feita para referência à rotina:
