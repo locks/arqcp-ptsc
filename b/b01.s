@@ -1,6 +1,7 @@
 ; Enunciado:
 ;
-; B1:	Faça uma rotina que partindo de 3 valores de 32 bits, colocados em memória, se obtenha o resultado da seguinte expressão matemática: n4=n1+n2-n3; Na pilha, os parâmetros de entrada e de saída são os apresentados na indicação feita para referência à rotina:
+; B1:	Faça uma rotina que partindo de 3 valores de 32 bits, colocados em memória, se obtenha o resultado da seguinte expressão matemática: n4=n1+n2-n3.
+; Na pilha, os parâmetros de entrada e de saída são os apresentados na indicação feita para referência à rotina:
 ;	F1(n1 n2 n3 -- n4)
 ;
 
