@@ -16,6 +16,7 @@ ex_a_1::
 	add
 ret
 
+
 inicio::
 	push.l #5
 	push.l #4
