@@ -4,11 +4,19 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;   Table of Contents                                    ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;   1. eum                                               ;
-;   2. eigual                                            ;
-;   3. junta4b                                           ;
-;   4. cifra                                             ;
-;   5. decifra                                           ;
+;   1. getFuncNumLen                                     ;
+;   2. getFuncNomeLen                                    ;
+;   3. getFuncVencLen                                    ;
+;   4. getFuncCatLen                                     ;
+;   5. getFuncLen                                        ;
+;   6. getFuncNumAddr                                    ;
+;   7. getFuncNomeAddr                                   ;
+;   8. getFuncCatAddr                                    ;
+;   9. getFuncVencAddr                                   ;
+;  10. io_readFuncionario                                ;
+;  11. io_printFuncionario                               ;
+;  12. io_readNFuncionario                               ;
+;  13. io_printNFuncionario                              ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -4,13 +4,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;   Table of Contents                                    ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;   1. eum                                               ;
-;   2. eigual                                            ;
-;   3. junta4b                                           ;
-;   4. cifra                                             ;
-;   5. decifra                                           ;
+;   1. getElemAddr                                       ;
+;   2. getNlinhas                                        ;
+;   3. getNcolunas                                       ;
+;   4. io_readMatriz                                     ;
+;   5. io_printMatriz                                    ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Nesta biblioteca assume-se o seguinte formato para a definição da matriz
