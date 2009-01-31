@@ -12,7 +12,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;esta biblioteca assume que a estrutura funcionario é definida da seguinte forma
+;		esta biblioteca assume que a estrutura funcionario
+;	é definida da seguinte forma
 ;
 ;funcionario::	
 ;		.long		0x0	;número	
@@ -21,176 +22,180 @@
 ;		.long		0x0	;vencimento
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;definição de labels
 num:	.byte "Numero: ",0x0
 nome:	.byte "Nome: ",0x0
 cat:	.byte "Categoria: ",0x0
 venc:	.byte "Vencimento: ",0x0
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-;getFuncNumLen(--  len)	
-;desc:	retorna o tamanho do campo num
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;getFuncNumLen(--  len)
+;
+;desc:
+;		retorna o tamanho do campo num
 ;
 ;input:
-;	
 ;
 ;output:
-;	len: tamanho do campo	num
+;		len: tamanho do campo	num
 ;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 getFuncNumLen::
-		push.n	#4
-		ret
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-;getFuncNomeLen(--  len)	
-;desc:	retorna o tamanho do campo nome
+	push.n	#4
+ret
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;getFuncNomeLen(--  len)
+;
+;desc:
+;		retorna o tamanho do campo nome
 ;
 ;input:
-;	
 ;
 ;output:
-;	len: tamanho do campo	nome
-;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;		len: tamanho do campo	nome
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 getFuncNomeLen::
-		push.b	#50
-		ret
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-;getFuncVencLen(--  len)	
-;desc:	retorna o tamanho do campo venc
+	push.b	#50
+ret
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;getFuncVencLen(--  len)
+;
+;desc:
+;		retorna o tamanho do campo venc
 ;
 ;input:
-;	
 ;
 ;output:
-;	len: tamanho do campo	venc
+;		len: tamanho do campo	venc
 ;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 getFuncVencLen::
-		push.b	#4
-		ret
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
+	push.b	#4
+ret
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;getFuncCatLen(--  len)	
-;desc:	retorna o tamanho do campo cat
+;
+;desc:
+;		retorna o tamanho do campo cat
 ;
 ;input:
-;	
 ;
 ;output:
-;	len: tamanho do campo	cat
-;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;		len: tamanho do campo	cat
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 getFuncCatLen::
-		push.b	#30
-		ret
+	push.b	#30
+ret
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;getFuncLen(--  len)	
-;desc:	retorna o tamanho da estrutura funcionario
+;
+;desc:
+;		retorna o tamanho da estrutura funcionario
 ;
 ;input:
-;	
 ;
 ;output:
-;	len: tamanho da estrutura
-;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;		len: tamanho da estrutura
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 getFuncLen::
-		call	getFuncNumLen
-		call	getFuncNomeLen
-		call	getFuncCatLen
-		call	getFuncVencLen
-		add
-		add
-		add
-		ret
+	call	getFuncNumLen
+	call	getFuncNomeLen
+	call	getFuncCatLen
+	call	getFuncVencLen
+	add
+	add
+	add
+ret
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-;getFuncNumAddr(addr_base  --  addr_num)	
-;desc:	retorna o endereço do campo num
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;getFuncNumAddr(addr_base  --  addr_num)
+;
+;desc:
+;		retorna o endereço do campo num
 ;
 ;input:
-;	addr_base: endereço base da estrutura funcionario
-;
+;		addr_base: endereço base da estrutura funcionario
 ;output:
-;	addr_num: endereço do campo num	
-;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;		addr_num: endereço do campo num	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 getFuncNumAddr::
-		ret
+ret
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-;getFuncNomeAddr(addr_base  --  addr_nome)	
-;desc:	retorna o endereço do campo nome
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;getFuncNomeAddr(addr_base  --  addr_nome)
+;
+;desc:
+;		retorna o endereço do campo nome
 ;
 ;input:
-;	addr_base: endereço base da estrutura funcionario
-;
+;		addr_base: endereço base da estrutura funcionario
 ;output:
-;	addr_nome: endereço do campo nome
-;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;		addr_nome: endereço do campo nome
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 getFuncNomeAddr::
-		call	getFuncNumLen
-		ret
+	call	getFuncNumLen
+ret
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-;getFuncCatAddr(addr_base  --  addr_cat)	
-;desc:	retorna o endereço do campo categoria
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;getFuncCatAddr(addr_base  --  addr_cat)
+;
+;desc:
+;		retorna o endereço do campo categoria
 ;
 ;input:
-;	addr_base: endereço base da estrutura funcionario
-;
+;		addr_base: endereço base da estrutura funcionario
 ;output:
-;	addr_cat: endereço do campo categoria
-;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;		addr_cat: endereço do campo categoria
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 getFuncCatAddr::
-		call	getFuncNumLen
-		call	getFuncNomeLen
-		add
-		add
-		ret
+	call	getFuncNumLen
+	call	getFuncNomeLen
+	add
+	add
+ret
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-;getFuncVencAddr(addr_base  --  addr_venc)	
-;desc:	retorna o endereço do campo categoria
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;getFuncVencAddr(addr_base  --  addr_venc)
+;
+;desc:
+;		retorna o endereço do campo categoria
 ;
 ;input:
-;	addr_base: endereço base da estrutura funcionario
-;
+;		addr_base: endereço base da estrutura funcionario
 ;output:
-;	addr_venc: endereço do campo vencimento
-;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;		addr_venc: endereço do campo vencimento
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 getFuncVencAddr::
-		call	getFuncNumLen
-		call	getFuncNomeLen
-		call	getFuncCatLen
-		add
-		add
-		add
-		ret
+	call	getFuncNumLen
+	call	getFuncNomeLen
+	call	getFuncCatLen
+	add
+	add
+	add
+ret
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-;io_readFuncionario(addr  --  )	
-;desc:	lê os dados de um funcionario
-;		Os dados dos funcionários são os seguintes: 
-;		o número (4 bytes) 
-;		o nome (50 bytes)
-;		a categoria (30 bytes);
-;		o vencimento (4 bytes).
-;input:
-;	addr: endereço
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;io_readFuncionario(addr  --  )
 ;
+;desc:
+;		lê os dados de um funcionario.
+;		Os dados dos funcionários são os seguintes: 
+;			o número (4 bytes) 
+;			o nome (50 bytes)
+;			a categoria (30 bytes);
+;			o vencimento (4 bytes).
+;
+;input:
+;		addr: endereço
 ;output:
-;	
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 io_readFuncionario::
 	pop	lstack
 	push.l	#num
@@ -225,22 +230,24 @@ io_readFuncionario::
 	st		[]
 	pop
 	pop
-	ret
+ret
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-;io_printFuncionario(addr  --  )	
-;desc:	escreve na consola os dados de um funcionario
-;		Os dados dos funcionários são os seguintes: 
-;		o número (4 bytes) 
-;		o nome (50 bytes)
-;		a categoria (30 bytes);
-;		o vencimento (4 bytes).
-;input:
-;	addr: endereço
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;io_printFuncionario(addr  --  )
 ;
+;desc:
+;		escreve na consola os dados de um funcionario
+;		Os dados dos funcionários são os seguintes: 
+;			o número (4 bytes) 
+;			o nome (50 bytes)
+;			a categoria (30 bytes);
+;			o vencimento (4 bytes).
+;
+;input:
+;		addr: endereço
 ;output:
-;	
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 io_printFuncionario::
 	pop	lstack
 	push.b	#'\n'
@@ -274,22 +281,25 @@ io_printFuncionario::
 	ld		[]
 	call	io_printLong
 	pop
-	ret
+ret
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-;io_readNFuncionario(addr n --  )	
-;desc:	lê os dados de n funcionarios
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;io_readNFuncionario(addr n --  )
+;
+;desc:
+;		lê os dados de n funcionarios
 ;		Os dados dos funcionários são os seguintes: 
-;		o número (4 bytes) 
-;		o nome (50 bytes)
-;		a categoria (30 bytes);
-;		o vencimento (4 bytes).
+;			o número (4 bytes) 
+;			o nome (50 bytes)
+;			a categoria (30 bytes);
+;			o vencimento (4 bytes).
+;
 ;input:
-;	addr: endereço
-;	n:	numero de funcionarios
+;		addr: endereço
+;		n:    numero de funcionarios
 ;output:
-;	
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 io_readNFuncionario::
 	push	ct
 	pop	lstack
@@ -303,33 +313,38 @@ io_readNFuncionario::
 	pop
 	push	lstack
 	pop	ct
-	ret
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-;io_printNFuncionario(addr n --  )	
-;desc:	escreve os dados de n funcionarios
+ret
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;io_printNFuncionario(addr n --  )
+;
+;desc:
+;		escreve os dados de n funcionarios
 ;		Os dados dos funcionários são os seguintes: 
-;		o número (4 bytes) 
-;		o nome (50 bytes)
-;		a categoria (30 bytes);
-;		o vencimento (4 bytes).
+;			o número (4 bytes) 
+;			o nome (50 bytes)
+;			a categoria (30 bytes);
+;			o vencimento (4 bytes).
+;
 ;input:
-;	addr: endereço
-;	n:	numero de funcionarios
+;		addr: endereço
+;		n:    numero de funcionarios
 ;output:
-;	
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 io_printNFuncionario::
 	push	ct
-	pop		lstack
-	pop		ct
+	pop	lstack
+	pop	ct
+
 	io_printNFuncionario_ciclo::
 		push
 		call	io_printFuncionario
 		call	getFuncLen
 		add
 	dbr	io_printNFuncionario_ciclo
+
 	pop
 	push	lstack
 	pop	ct
-	ret
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+ret

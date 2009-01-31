@@ -15,20 +15,24 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Nesta biblioteca assume-se o seguinte formato para a definição da matriz
 ;
-;mat:: 	.long	4 ;numero de linhas
-;	.long	5 ;numero de colunas
-;	.space.l 20 ; espaço para os dados do tipo long
+;mat::
+;		.long	4		;numero de linhas
+;		.long	5		;numero de colunas
+;		.space.l 20	;espaço para os dados do tipo long
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-;getElemAddr(addr i j -- addr_ij)	
-;desc:	retorna o endereço da posição i j da matriz
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;getElemAddr(addr i j -- addr_ij)
+;
+;desc:
+;		retorna o endereço da posição i j da matriz
+;
 ;input:
-;	addr: o endereço base matriz
-;	i: indice das linhas
-;	j: indice das colunas
+;		addr: o endereço base matriz
+;		i:    indice das linhas
+;		j:    indice das colunas
 ;output:
-;	addr_ij: endereço da posição i j
+;		addr_ij: endereço da posição i j
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 getElemAddr::
 	pop	lstack
@@ -46,39 +50,49 @@ getElemAddr::
 	add
 	shl	#2	;multiplicar por 4
 	add
-	ret
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-;getNlinhas(addr -- nlinhas)	
-;desc:	retorna o numero de linhas
+ret
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;getNlinhas(addr -- nlinhas)
+;
+;desc:
+;		retorna o numero de linhas
+;
 ;input:
-;	addr: o endereço base matriz
-;	
+;		addr: o endereço base matriz
 ;output:
-;	nlinhas: numero de linhas
+;		nlinhas: numero de linhas
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 getNlinhas::
 	ld	[]
-	ret
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-;getNcolunas(addr -- ncolunas)	
-;desc:	retorna o numero de colunas
+ret
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;getNcolunas(addr -- ncolunas)
+;
+;desc:
+;		retorna o numero de colunas
+;
 ;input:
-;	addr: o endereço base matriz
-;	
+;		addr: o endereço base matriz
 ;output:
-;	nlinhas: numero de colunas
+;		nlinhas: numero de colunas
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 getNcolunas::
 	inc	#4
 	ld	[]
-	ret
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-;io_readMatriz(addr--)	
-;desc:	lê uma matriz de longs
+ret
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;io_readMatriz(addr--)
+;
+;desc:
+;		lê uma matriz de longs
+;
 ;input:
-;	addr: o endereço base da matriz
+;		addr: o endereço base da matriz
 ;output:
-;	
+;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 io_readMatriz::
 	push	ct
@@ -129,14 +143,18 @@ io_readMatriz::
 	dbr 	io_readMatriz_ciclo
 	push	lstack
 	pop	ct
-	ret
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-;io_printMatriz(addr--)	
-;desc:	lê uma matriz de longs
+ret
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;io_printMatriz(addr--)
+;
+;desc:
+;		lê uma matriz de longs
+;
 ;input:
-;	addr: o endereço base da matriz
+;		addr: o endereço base da matriz
 ;output:
-;	
+;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 io_printMatriz::
 	push	ct
@@ -194,7 +212,4 @@ io_printMatriz::
 	dbr 	io_printMatriz_ciclo
 	push	lstack
 	pop	ct
-	ret
-
-
-	
+ret
