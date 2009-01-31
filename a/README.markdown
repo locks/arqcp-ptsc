@@ -27,7 +27,7 @@ __nota__ sem recorrer a bibliotecas
 ## Exercício 05
 
 Faça uma rotina que possa utilizar num programa para efectuar a multiplicação de dois operandos:  
-+ __mymulu__ para números sem sinal
++ __mymulu__ para números sem sinal  
 + __mumuls__ para números com sinal
 
 ## Exercício 06
