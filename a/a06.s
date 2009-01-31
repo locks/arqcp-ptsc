@@ -10,11 +10,10 @@
 .org 0x1000
 	br inicio
 
-
 inicio::
 	push.l #3
 	push.l #2
 	call mymulu
 
 	halt
-	.end
+.end
