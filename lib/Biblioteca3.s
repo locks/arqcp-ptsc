@@ -1,9 +1,8 @@
-;last update @ 2008/10/13
 
 .file "biblioteca3.s"
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;        Table of Contents                               ;
+;   Table of Contents                                    ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;   1. stringLen                                         ;
 ;   2. stringCopy                                        ;
@@ -37,9 +36,9 @@ stringLen::
 		pop	lstack
 	br stringLen_loop
 
-stringLen_end::
-	push lstack
-	pop
+	stringLen_end::
+		push lstack
+		pop
 ret
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -79,12 +78,12 @@ stringCopy::
 		pop	r2
 	br 	stringCopy_loop
 
-stringCopy_end::
-	push lstack
-	pop
-	push	lstack
-	call escrb
-	push lstack
+	stringCopy_end::
+		push lstack
+		pop
+		push	lstack
+		call escrb
+		push lstack
 ret
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -113,6 +112,7 @@ stringNCopy::
 		push	r2
 		push
 		bz	stringNCopy_end
+		
 		pop
 		push	r0
 		ld.b	[]
@@ -135,14 +135,14 @@ stringNCopy::
 		pop	r3
 	br 	stringNCopy_loop
 
-stringNCopy_end::
-	push lstack
-	pop
-	push	lstack
-	call escrb
-	push lstack
-	pop
-	push lstack
+	stringNCopy_end::
+		push lstack
+		pop
+		push	lstack
+		call escrb
+		push lstack
+		pop
+		push lstack
 ret
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -170,14 +170,14 @@ stringCmp::
 		xor
 		bz 	stringCmp_cont
 		
-	push.n	#-1
-	stringCmp_fim::
+		push.n	#-1
+		stringCmp_fim::
 		eqz
 		push lstack
 		push lstack
 		pop
 		pop
-	ret
+ret
 
 	stringCmp_cont::
 		push 	r0
