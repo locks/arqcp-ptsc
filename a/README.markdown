@@ -2,23 +2,27 @@
 
 ## Exercício 01
 
-Faça uma rotina que calcule o resultado da operação: 5+4-6  
-_nota_: 5+4-6 -> 5 4 + 6 -
+Faça uma rotina que calcule o resultado da operação: 5+4-6
+
+__nota__ 5+4-6 -> 5 4 + 6 -
 
 ## Exercício 02
 
-Faça uma rotina que calcule o resultado da operação: 1-(2+5)  
-_nota_: 1-(2+5) -> 1 2 5 + -
+Faça uma rotina que calcule o resultado da operação: 1-(2+5)
+
+__nota__ 1-(2+5) -> 1 2 5 + -
 
 ## Exercício 03
 
-Faça uma rotina que calcule o resultado da operação: (3+2)-(3-5)  
-_nota_: 3 2 + 3 5 - -
+Faça uma rotina que calcule o resultado da operação: (3+2)-(3-5)
+
+__nota__ 3 2 + 3 5 - -
 
 ## Exercício 04
 
-Faça uma rotina que calcule o resultado da operação 3*2  
-_nota_ sem recorrer a bibliotecas
+Faça uma rotina que calcule o resultado da operação 3*2
+
+__nota__ sem recorrer a bibliotecas
 
 ## Exercício 05
 
