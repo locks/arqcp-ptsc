@@ -2,6 +2,16 @@
 .file "biblioteca7.s"
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;        Table of Contents                               ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;   1. eum                                               ;
+;   2. eigual                                            ;
+;   3. junta4b                                           ;
+;   4. cifra                                             ;
+;   5. decifra                                           ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;esta biblioteca assume que a estrutura funcionario é definida da seguinte forma
 ;
 ;funcionario::	
