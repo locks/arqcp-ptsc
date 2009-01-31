@@ -32,7 +32,7 @@ Faça uma rotina que possa utilizar num programa para efectuar a multiplicação
 
 ## Exercício 06
 
-Repita o exercício _04_ utilizando a rotina desenvolvida no exercício anterior.
+Repita o exercício __04__ utilizando a rotina desenvolvida no exercício anterior.
 
 ## Exercício 07
 
@@ -44,7 +44,7 @@ Faça uma rotina que calcule o resultado da operação (3+2)*(5+4)*(4-1)
 
 ## Exercício 09
 
-Faça uma rotina que calcule o resultado da operação __3/2__
+Faça uma rotina que calcule o resultado da operação 3\/2
 
 ## Exercício 10
 
@@ -53,7 +53,7 @@ Faça uma rotina que possa utilizar num programa para efectuar a divisão de doi
 
 ## Exercício 11
 
-Repita o exercício _09_ utilizando a rotina desenvolvida no exercício anterior.
+Repita o exercício __09__ utilizando a rotina desenvolvida no exercício anterior.
 
 ## Exercício 12
 
