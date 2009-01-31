@@ -44,7 +44,7 @@ Faça uma rotina que calcule o resultado da operação (3+2)*(5+4)*(4-1)
 
 ## Exercício 09
 
-Faça uma rotina que calcule o resultado da operação 3\/2
+Faça uma rotina que calcule o resultado da operação 3/2
 
 ## Exercício 10
 
