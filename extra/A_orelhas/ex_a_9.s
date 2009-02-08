@@ -1,0 +1,21 @@
+; Enunciado:
+;
+; A9:	Faça uma rotina que calcule o resultado da operação 3/2
+;
+
+.file "ex_a_9.s"
+
+.org 0x1000        			; programa inicia-se no byte 0x1000
+	br inicio
+.include  "auxil.s"      		; definições auxiliares
+.include  "UTIL.s"
+
+
+inicio::
+	push.l #3
+	push.l #0
+	push.l #2
+	call mydivu
+
+	halt
+	.end
