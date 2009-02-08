@@ -5,41 +5,63 @@
 	br inicio
 
 difHora::
-	push.l #0
-	push
-	push
-	pop lstack ;r4 flag minutos
-	pop lstack ;r3 flag horas
-	
-	pop lstack ;r2 hor2
-	pop lstack ;r1 min2
-	pop lstack ;r0 seg2
-	
-	rev			; (min1 hor1 seg1 --)
-	push lstack ; (min1 hor1 seg1 seg2 --)
-	sub			; (min1 hor1 res_seg --)
-	call verifica_segundos
-		;
-		;   esta rotina verifica se o res_seg é menor que
-		; zero. se sim, incrementa a flag_minutos.
-		;
-	
-	rev			; (hor1 res_seg min1 --)
-	push lstack ; (hor1 res_seg min1 min2 --)
-	sub			; (hor1 res_seg res_min --)
-	call verifica_minutos
-	
-	rev			; (res_seg res_min hor1 --)
-	push lstack	; (res_seg res_min hor1 hor2--)
-	sub			; (res_seg res_min res_hor --)
-	
-	pop lstack	; (res_seg res_min res_hor flag_hor --)
-	sub
-	xcg			; (res_seg hor_fim res_min --)
-	pop lstack	; (res_seg hor_fim res_min flag_min --)
-	sub			; (res_seg hor_fim min_fim)
-	xcg
+	call converte_para_segundos
+	pop lstack
+	call converte_para_segundos
+	push lstack
+		; (total1 total2)
+	call verificar_24h
+
+	call converte_final ; (segundos_resultado -- seg3 min3 hor3)
 ret
+
+	converte_para_segundos::
+		push.l #3600
+		call mymulu
+		pop
+
+		xcg
+		push.l #60
+		call mymulu
+		pop
+
+		add
+		add
+	ret
+
+	verificar_24h::
+		; (seg_total_1 seg_total_2)
+		pop lstack
+		pop lstack	; (r1:seg_total_2 r0:seg_total_1)
+	
+		push r0
+		push r1
+		mxm
+
+		xcg
+		pop
+		push r1
+		AND
+		bz hora2_eh_maior
+	
+		push lstack
+		push lstack
+		sub
+	ret
+
+		hora2_eh_maior::
+			;
+			; acrescenta 24h ao total_1:
+			;   1:30 (t1) - 2:40 (t2) daria erro, o relógio precisa "dar a volta"
+			;   24h+1h30 - 2h40
+			;
+			push lstack
+			push.l #24horas
+			ld []
+			add
+			push lstack
+			sub
+		ret
 
 inicio::
 	push.n #seg1
