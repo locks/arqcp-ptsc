@@ -27,7 +27,7 @@
 ;		resto: resto
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 mydivu:: 
-	push 	g0    		
+	push 	g0
 	pop 	lstack
 	pop  	g0      			; colocar o divisor em g0
 	divu
@@ -49,7 +49,7 @@ ret
 ;		n3_high: resultado(parte baixa do numero de 64 bits)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 mymulu::
-	push 	g0      
+	push 	g0
 	pop 	lstack
 	pop  	g0      ; colocar n2 em g0
 	push.n 	#0
@@ -126,7 +126,7 @@ estadentro::
 
 	push	r2
 	push	r0
-	mxm		
+	mxm
 	xcg
 	pop
 	push	r2
@@ -134,18 +134,18 @@ estadentro::
 
 	push	r2
 	push	r1
-	mxm		
+	mxm
 	pop
 	push	r2
 	sub
 
 	or
 	eqz
-	push	lstack		
-	pop	
-	push	lstack			
+	push	lstack
 	pop
-	push	lstack			
+	push	lstack
+	pop
+	push	lstack
 	pop
 ret
 

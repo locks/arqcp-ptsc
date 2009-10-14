@@ -22,27 +22,23 @@ vector3:: .long 4, 2345,346534,89678,23
 ;.include "Biblioteca1.s"
 ; biblioteca de funções
 
-
 vectorNumElemIguais::
-                        ld.b []
-			xcg
-			ld[]
- 			sub
-			eqz
-			
-		        ret
+	ld.b []
+	xcg
+	ld[]
+	sub
+	eqz
+ret
 
-	
 inicio::
+	push #vector1
+	push #vector2
+	call vectorNumElemIguais
 
-		push #vector1
-		push #vector2
-		call vectorNumElemIguais
+	push #vector2
+	push #vector3
+	xcg
+	call vectorNumElemIguais
 
-		push #vector2
-		push #vector3
-		xcg
-		call vectorNumElemIguais
-
-        	halt
-       		.end
+	halt
+.end

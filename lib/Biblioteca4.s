@@ -210,9 +210,11 @@ io_printLong::
 	pop		lstack
 	push.n	#0
 	pop		lstack
+
 	io_printLong_loop::
 		push		
 		bz		io_printLong_end
+
 		push.n	#0
 		push.b	#10
 		call mydivu
@@ -221,24 +223,29 @@ io_printLong::
 		inc		#1
 		pop		r0
 	br io_printLong_loop
+
 	io_printLong_end::
-	pop
-	push	lstack
-	push
-	bz io_printLong_zero
-	pop		ct
-	io_printLong_loop1::
-		call num2ascii
-		call io_printByte
-	dbr io_printLong_loop1
+		pop
+		push	lstack
+		push
+		bz io_printLong_zero
+	
+		pop		ct
+	
+		io_printLong_loop1::
+			call num2ascii
+			call io_printByte
+		dbr io_printLong_loop1
+	
 	br io_printLong_end1
+
 	io_printLong_zero::
 		push.b	#'0'
 		add
 		call io_printByte
 	io_printLong_end1::
-	push	lstack
-	pop 	ct
+		push	lstack
+		pop 	ct
 	ret
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
